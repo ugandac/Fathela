@@ -1,5 +1,5 @@
 {
-  "name":"ANDBAD MD",
+  "name":"MUSICBOT",
   "description":"Best whatsapp bot created by mrandbad",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://i.imgur.com/L4U2K76.jpeg",
@@ -19,7 +19,7 @@
       "value":"yes",
       "required":false
     },
-      "AUTO_REACT_STATUS":
+      "AUTO_LIKE_STATUS":
     {
       "description":"Enter yes for your bot to auto react status",
       "value":"yes",
