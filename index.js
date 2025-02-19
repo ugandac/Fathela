@@ -247,9 +247,19 @@ function mybotpic() {
                 mybotpic
             
             };
+            
+ //Beltah Tech commnds auto react to status 
+            if (mek.key && mek.key.remoteJid === 'status@broadcast' && conf.AUTO_LIKE_STATUS === "true") {
+
+const adams = await ad.decodeJid(ad.user.id);
+
+const react = ["😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂"];
 
 
-            /************************ anti-delete-message */
+await ad.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text:'}},
+ { statusJidList: [mek.key.participant, adams] });
+            }
+    /************************ anti-delete-message */
 
             if(ms.message.protocolMessage && ms.message.protocolMessage.type === 0 && (conf.ADM).toLocaleLowerCase() === 'yes' ) {
 
