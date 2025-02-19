@@ -24,7 +24,7 @@ module.exports = {
   'ETAT': process.env.PRESENCE || '',
   'CHATBOT': process.env.PM_CHATBOT || 'no',
   'ANTICALL': process.env.ANTICALL || "non",
-  'AUTO_REACT_STATUS': process.env.AUTO_REACT_STATUS || "yes",
+  'TECH : process.env.AUTO_REACT_STATUS || 'yes',
   'DP': process.env.STARTING_BOT_MESSAGE || "yes",
   'ADM': process.env.ANTI_DELETE_MESSAGE || "yes",
   'DATABASE_URL': DATABASE_URL,
