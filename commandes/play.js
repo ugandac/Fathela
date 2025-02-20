@@ -1,16 +1,10 @@
-const { zokou } = require("../framework/zokou");
-const axios = require('axios');
-const ytSearch = require('yt-search');
-const conf = require(__dirname + '/../set');
-const fs = require('fs-extra');
-const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
-
-
-// Define the command with aliases for play
+const {
+  zokou
+} = require("../framework/zokou");
+const yts = require("yt-search");
 zokou({
-  nomCom: "pl",
-  aliases: ["song", "playdoc", "audio", "mp3"],
-  categorie: "download",
+  'nomCom': "pl",
+  'categorie': "Search",
   reaction: "📍"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
