@@ -1,7 +1,7 @@
 const {
   zokou
 } = require("../framework/zokou");
-const yts = require("yt-search");
+const ytSearch = require('yt-search');
 zokou({
   'nomCom': "pl",
   'categorie': "Search",
