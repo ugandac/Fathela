@@ -1,14 +1,14 @@
 {
-  "name": "MUSICBOT ❤️",
-  "description": "This BOT was developed by CASEYRHODES.",
+  "name": "𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md",
+  "description": "This BOT was developed by 𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵.",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-  "repository": "https://github.com/Kingdragony/Musicbot",
+  "logo": "https://i.imgur.com/azXxuNj.jpeg",
+  "repository": "https://github.com/Timetofficial/Mr-heisme-md",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -54,7 +54,7 @@
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
+      "value":"https://i.imgur.com/azXxuNj.jpeg",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -80,12 +80,12 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "Arlodragon🍀"
+      "value": "𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md"
     },
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "254112192119"
+      "value": "254702713600"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
