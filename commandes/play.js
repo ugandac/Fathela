@@ -8,7 +8,7 @@ const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
 
 // Define the command with aliases for play
 zokou({
-  nomCom: "play",
+  nomCom: "pl",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "download",
   reaction: "📍"
@@ -130,7 +130,7 @@ zokou({
 
 // Define the command with aliases for video
 zokou({
-  nomCom: "video",
+  nomCom: "vid",
   aliases: ["videodoc", "film", "mp4"],
   categorie: "download",
   reaction: "🔥"
