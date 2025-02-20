@@ -1,5 +1,5 @@
 {
-  "name": "musicbot",
+  "name": "Mr-heisme-md",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "whatsapp-bot",
     "musicbot"
   ],
-  "author": "Arlodragon",
+  "author": "Mr-heisme-md",
 "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
