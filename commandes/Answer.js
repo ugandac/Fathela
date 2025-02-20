@@ -55,7 +55,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const image = arg.join(' ');
-      const response = await axios.get(`https://api.davidcyriltech.my.id/ai/gpt4omini?text=${image}`);
+      const response = await axios.get(`https://gtech-api-xtp1.onrender.com/api/ai/llama?prompt=${image}`);
       
       const data = response.data;
       let caption = '*powered by ANDBAD-MD*';
@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://api.davidcyriltech.my.id/ai/gpt4omini?text=${question}`);
+      const response = await axios.get(`https://gtech-api-xtp1.onrender.com/api/gemini/flash?prompt=${question}`);
       
       const data = response.data;
       if (data) {
