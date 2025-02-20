@@ -11,7 +11,7 @@ zokou({
   nomCom: "play",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "download",
-  reaction: "🎥"
+  reaction: "📍"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
@@ -133,7 +133,7 @@ zokou({
   nomCom: "video",
   aliases: ["videodoc", "film", "mp4"],
   categorie: "download",
-  reaction: "🎥"
+  reaction: "🔥"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
