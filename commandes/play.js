@@ -1,10 +1,16 @@
-const {
-  zokou
-} = require("../framework/zokou");
+const { zokou } = require("../framework/zokou");
+const axios = require('axios');
 const ytSearch = require('yt-search');
+const conf = require(__dirname + '/../set');
+const fs = require('fs-extra');
+const { downloadAndSaveMediaMessage } = require('@whiskeysockets/baileys');
+
+
+// Define the command with aliases for play
 zokou({
-  'nomCom': "pl",
-  'categorie': "Search",
+  nomCom: "play",
+  aliases: ["song", "playdoc", "audio", "mp3"],
+  categorie: "download",
   reaction: "📍"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
@@ -124,7 +130,7 @@ zokou({
 
 // Define the command with aliases for video
 zokou({
-  nomCom: "vid",
+  nomCom: "video",
   aliases: ["videodoc", "film", "mp4"],
   categorie: "download",
   reaction: "🔥"
