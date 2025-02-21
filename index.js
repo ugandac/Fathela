@@ -226,7 +226,7 @@ if (conf.MUSICBOTR === "yes") {
     setTimeout(async () => {
       await zk.sendMessage(callerId, {
         text: `🚫 *Call Rejected!*  
-Hi there, I’m *MUSICBOT* 🤖.  
+Hi there, I’m *𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵*  🎭.  
 ⚠️ My owner is unavailable at the moment.  
 Please try again later or leave a message. Cheers! 😊`
       });
