@@ -37,7 +37,7 @@
       "value": "no",
       "required": false
     },
-      "STATUS_AUTO_REACT": {
+      "AUTO_REACT_STATUS": {
       "description":"Enter yes for your bot to auto react status",
       "value":"yes",
       "required":false
