@@ -158,7 +158,7 @@ zk.ev.on('messages.upsert', async (msg) => {
                 await zk.sendMessage(
                     from,
                     {
-                        text: `⚠️𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
+                        text: `⚠️HEISME anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
                         mentions: [sender],
                     }
                 );
