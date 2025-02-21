@@ -158,7 +158,7 @@ zk.ev.on('messages.upsert', async (msg) => {
                 await zk.sendMessage(
                     from,
                     {
-                        text: `⚠️Musicbot anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
+                        text: `⚠️𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
                         mentions: [sender],
                     }
                 );
@@ -176,7 +176,7 @@ if (conf.MUSICBOTR === "yes") {
         const { messages } = m;
         
         // Common love reaction emojis for WhatsApp status
-        const reactionEmojis = ["❤️", "💖", "💞", "💕", "😍", "💓", "💗", "🔥"];
+        const reactionEmojis = ["😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂"];
 
         for (const message of messages) {
             if (message.key && message.key.remoteJid === "status@broadcast") {
