@@ -1,126 +1,98 @@
-const { zokou } = require('../framework/zokou');
-const traduire = require("../framework/traduction") ;
-const { default: axios } = require('axios');
-//const conf = require('../set');
+const { zokou } = require("../framework/zokou");
+const ai = require('unlimited-ai');
+const axios = require('axios'); // Added missing axios import
+const fs = require('fs');
+const conf = require(__dirname + "/../set");
 
+// Common function for fetching GPT responses
+const fetchGptResponse = async (url, query) => {
+  try {
+    const response = await axios.get(url + encodeURIComponent(query));
+    const data = response.data;
+    if (data && data.status) {
+      return data.BK9;
+    } else {
+      throw new Error('Failed to retrieve GPT response.');
+    }
+  } catch (error) {
+    console.error('Error fetching GPT response:', error);
+    return 'Something went wrong. Unable to fetch GPT response.';
+  }
+};
 
+// General handler for AI commands
+const handleAiCommand = async (dest, zk, params, url, usageExample) => {
+  const { repondre, arg } = params;
+  const alpha = arg.join(" ").trim();
 
+  if (!alpha) {
+    return repondre(usageExample);
+  }
 
-zokou({nomCom:"Andbadtech",reaction:"😁",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+  const text = alpha;
 
-  const {repondre,ms,arg}=commandeOptions;
-  
-    if(!arg || !arg[0])
-    {return repondre(" Am here")}
-    //var quest = arg.join(' ');
-  try{
-    
-    
-const message = await traduire(arg.join(' '),{ to : 'en'});
- console.log(message)
-fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg=${message}`)
-.then(response => response.json())
-.then(data => {
-  const botResponse = data.cnt;
-  console.log(botResponse);
+  try {
+    const response = await fetchGptResponse(url, text);
 
-  traduire(botResponse, { to: 'en' })
-    .then(translatedResponse => {
-      repondre(translatedResponse);
-    })
-    .catch(error => {
-      console.error('Error when translating into French :', error);
-      repondre('Error when translating into French');
+    await zk.sendMessage(dest, {
+      text: response,
+      contextInfo: {
+        externalAdReply: {
+          title: conf.BOT,
+          body: "Keep learning",
+          thumbnailUrl: conf.URL,
+          sourceUrl: "https://whatsapp.com/channel/0029VavxSwfLY6czRd1i0K39",
+          mediaType: 1,
+          showAdAttribution: true,
+        },
+      },
     });
-})
-.catch(error => {
-  console.error('Error requesting BrainShop :', error);
-  repondre('Error requesting BrainShop');
+  } catch (error) {
+    console.error("Error generating AI response:", error);
+    await repondre("Sorry, I couldn't process your request.");
+  }
+};
+
+// Beltah command handlers
+  
+zokou({
+  nomCom: "gpt",
+  aliases: ["gpt4", "ai"],
+  reaction: '🤖',
+  categorie: "AI"
+}, async (dest, zk, params) => {
+  const { repondre, arg } = params;
+  const alpha = arg.join(" ").trim();
+
+  if (!alpha) {
+    return repondre("Please provide a song name.");
+  }
+
+  const text = alpha;
+  try {
+    const model = 'gpt-4-turbo-2024-04-09';
+    const messages = [
+      { role: 'user', content: text },
+      { role: 'system', content: 'You are an assistant in WhatsApp. You are called Beltah. You respond to user commands.' }
+    ];
+
+    const response = await ai.generate(model, messages);
+
+    await zk.sendMessage(dest, {
+      text: response,
+      contextInfo: {
+        externalAdReply: {
+          title: conf.BOT,
+          body: "keep learning with HEISME",
+          thumbnailUrl: conf.URL,
+          sourceUrl: "https://whatsapp.com/channel/0029VavxSwfLY6czRd1i0K39",
+          mediaType: 1,
+          showAdAttribution: true,
+        },
+      },
+    });
+  } catch (error) {
+    console.error("Error generating AI response:", error);
+    await repondre("Sorry, I couldn't process your request.");
+  }
 });
-
-  }catch(e){ repondre("oops an error : "+e)}
-    
-  
-  });  
-
-
-
-  zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please enter the necessary information to generate the image.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const image = arg.join(' ');
-      const response = await axios.get(`https://api.davidcyriltech.my.id/ai/gpt4omini?text=${image}`);
-      
-      const data = response.data;
-      let caption = '*powered by ANDBAD-MD*';
-      
-      if (data.status == 200) {
-        // Utiliser les données retournées par le service
-        const imageUrl = data.result;
-        zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
-      } else {
-        repondre("Error during image generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request");
-    }
-  });
-  
-  zokou({ nomCom: "ai", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please ask a question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const response = await axios.get(`https://api.davidcyriltech.my.id/ai/gpt4omini?text=${question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.result);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
-    }
-  });
-
-
-zokou({ nomCom: "gpt", reaction: "💡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please ask a question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const response = await axios.get(`https://api.davidcyriltech.my.id/ai/chatbot?query=${question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.result);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
-    }
-  });
-
-
-  
