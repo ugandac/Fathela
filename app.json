@@ -37,13 +37,18 @@
       "value": "no",
       "required": false
     },
-      "AUTO_REACT_STATUS": {
+      "STATUS_AUTO_REACT": {
       "description":"Enter yes for your bot to auto react status",
       "value":"yes",
       "required":false
     },
     "PM_PERMIT": {
       "description": "Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+      },
+    "GROUP_ANTLINK": {
+      "description": "Enter yes for your bot to auto remove link sender in group ",
       "value": "no",
       "required": false
     },
