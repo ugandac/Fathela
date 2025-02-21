@@ -765,10 +765,8 @@ if (conf.RANDOM2 === "yes") {
     // Delay for 1 second before sending a message
     setTimeout(async () => {
       await zk.sendMessage(callerId, {
-        text: `🚫 *Call Rejected!*  
-Hi there, I’m *MUSICBOT* 🤖.  
-⚠️ My owner is unavailable at the moment.  
-Please try again later or leave a message. Cheers! 😊`
+        text: `*_📞 Auto Call Reject Mode Activated by 𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-Md_* 
+*_📵 No Calls Allowed Dude!_*`
       });
     }, 1000); // 1-second delay
   }
