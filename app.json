@@ -49,7 +49,7 @@
       },
     "GROUP_ANTLINK": {
       "description": "Enter yes for your bot to auto remove link sender in group ",
-      "value": "no",
+      "value": "yes",
       "required": false
     },
     "BOT_NAME": {
