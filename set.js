@@ -31,6 +31,8 @@ module.exports = { session: process.env.SESSION_ID || '',
     DP : process.env.STARTING_BOT_MESSAGE || "yes",
     AUTOREAD_MESSAGE : process.env.AUTO_READ || "yes",
     DP : process.env.STARTING_BOT_MESSAGE || "yes",
+    MUSICBOT : process.env.GROUP_ANTLINK || "yes",
+    MUSICBOTR : process.env.STATUS_AUTO_REACT || "yes",
     TECH : process.env.AUTO_REACT_STATUS || 'yes',
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
