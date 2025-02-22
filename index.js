@@ -590,6 +590,7 @@ const emojiMap = {
     "piano": ["🎹", "🎶", "🎼", "🎵", "🎉"],
     
     // Objects and Symbols
+   const textbackEmojis = [
     "money": ["💸", "💰", "💵", "💳", "🤑"],
     "fire": ["🔥", "💥", "⚡", "🎇", "✨"],
     "rocket": ["🚀", "🌌", "🛸", "🛰️", "✨"],
@@ -733,7 +734,7 @@ if (conf.RANDOM2 === "yes") {
 
                 // Check for conversation text and apply emoji based on keywords in the sentence
                 const conversationText = message?.message?.conversation || "";
-                const randomEmoji = getEmojiForSentence(conversationText) || getRandomFallbackEmoji();
+                const randomEmoji = getEmojiForSentence(privateText) || gettextFallbackEmoji();
 
                 if (randomEmoji) {
                     await zk.sendMessage(message.key.remoteJid, {
@@ -743,7 +744,7 @@ if (conf.RANDOM2 === "yes") {
                         }
                     }).then(() => {
                         lastReactionTime = Date.now();
-                        console.log(`Successfully reacted with '${randomEmoji}' to message by ${message.key.remoteJid}`);
+                        console.log(`Successfully reacted with '${textEmoji}' to message by ${message.key.remoteJid}`);
                     }).catch(err => {
                         console.error("Failed to send reaction:", err);
                     });
