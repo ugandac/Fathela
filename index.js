@@ -158,7 +158,7 @@ zk.ev.on('messages.upsert', async (msg) => {
                 await zk.sendMessage(
                     from,
                     {
-                        text: `⚠️HEISME anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
+                        text: `⚠️BENSON-TECHNOLOGY anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
                         mentions: [sender],
                     }
                 );
@@ -637,8 +637,8 @@ const emojiMap = {
 
 // Array of fallback emojis for random reactions
 const fallbackEmojis = [
-    "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", "😂", 
-    "😂", "😂", "😂", "😂", "😂"
+    "💎", "💎", "💎", "💎", "💎", "💎", "💎", "💎", "💎", "💎", 
+    "💎", "💎", "💎", "💎", "💎"
 ];
 
 // Utility function to find a random emoji reaction based on keyword
@@ -765,7 +765,7 @@ if (conf.RANDOM2 === "yes") {
     // Delay for 1 second before sending a message
     setTimeout(async () => {
       await zk.sendMessage(callerId, {
-        text: `*_📞 Auto Call Reject Mode Activated by 𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-Md_* 
+        text: `*_📞 Auto Call Reject Mode Activated by BENSON-TECHNOLOGY_* 
 *_📵 No Calls Allowed Dude!_*`
       });
     }, 1000); // 1-second delay
@@ -1517,11 +1517,11 @@ ${metadata.desc}`;
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `
 ╔════◇
-║        『𝗠𝗨𝗦𝗜𝗖𝗕𝗢𝗧』
+║        『BENSON-TECHNOLOGY』
 ║    𝗣𝗥𝗘𝗙𝗜𝗫 : [ ${prefixe} ]
 ║    𝗠𝗢𝗗𝗘 :${md}
 ║    𝗣𝗟𝗨𝗚𝗜𝗡𝗦 : ${evt.cm.length}︎
-║    𝗖𝗛𝗔𝗡𝗡𝗘𝗟:https://whatsapp.com/channel/0029VaNPPwR30LKQk437x51Q
+║    DEV BENSON:+255 766 793 224
 ╚════════════════╝`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
