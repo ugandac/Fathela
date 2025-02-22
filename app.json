@@ -1,14 +1,14 @@
 {
-  "name": "𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md",
-  "description": "This BOT was developed by 𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵.",
+  "name": "BENSON-TECHNOLOGY",
+  "description": "This BOT was developed by BENSON-TECHNOLOGY.",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://i.imgur.com/azXxuNj.jpeg",
-  "repository": "https://github.com/Timetofficial/Mr-heisme-md",
+  "logo": "https://i.imgur.com/vAAA4Fq.jpeg",
+  "repository": "https://github.com/ugandac/BENSON-TECHNOLOGY",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -49,7 +49,7 @@
     },
     "ANTICALL": {
       "description":"Enter yes for your bot to auto reject calls",
-      "value":"yes",
+      "value":"no",
       "required":false
     },
     "PM_PERMIT": {
@@ -64,12 +64,12 @@
     },
     "BOT_NAME": {
       "description": "put A name for your bot",
-      "value": "𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md",
+      "value": "BENSON-TECHNOLOGY",
       "required": false
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.imgur.com/azXxuNj.jpeg",
+      "value":"https://i.imgur.com/vAAA4Fq.jpeg",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -95,12 +95,12 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md"
+      "value": "BENSON-TECHNOLOGY"
     },
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "254702713600"
+      "value": "255766793224"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
