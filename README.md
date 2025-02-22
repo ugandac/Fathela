@@ -4,8 +4,8 @@
 # 𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭-md
 
 <p align="center"> 
-<img src="https://i.imgur.com/azXxuNj.jpeg" />
-Musicbot Developed by 𝕬𝖗𝖑𝖔𝖉𝖗𝖆𝖌𝖔𝖓
+<img src="https://i.imgur.com/vAAA4Fq.jpeg" />
+Musicbot Developed by  *BENSON TECHNOLOGY*
   
 [`FORK`](https://github.com/Timetofficial/Mr-heisme-md/fork)
 
