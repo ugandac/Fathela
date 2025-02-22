@@ -16,7 +16,7 @@ zokou(
   {
     nomCom: 'ping',
     categorie: 'General',
-    reaction: '🎭',
+    reaction: '💎',
     alias: ['p']
   },
 
@@ -33,12 +33,12 @@ zokou(
     const end = new Date().getTime();
     const ping = end - start;
     await zk.sendMessage(dest, {
-      text: `𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵 🎭 speed... ${ping}ms`, edit: {
+      text: `BENSON-TECHNOLOGY💎 speed... ${ping}ms`, edit: {
         id: msg.key.id, remoteJid: dest
       }});
     await zk.sendMessage(dest, {
       react: {
-        text: "🎭", key: ms.key
+        text: "💎", key: ms.key
       }})
   }
 )
@@ -123,7 +123,7 @@ _CPU Core(s) Usage (${cpus.length} Core CPU)_
 zokou(
   {
     nomCom: 'runtime',
-    reaction: '🎭',
+    reaction: '💎',
     alias: ['uptime']
   },
   async (dest, zk, commandOptions) => {
@@ -131,7 +131,7 @@ zokou(
       ms
     } = commandOptions;
     const tumbUrl = 'https://i.ibb.co/wyYKzMY/68747470733a2f2f74656c656772612e70682f66696c652f6530376133643933336662346361643062333739312e6a7067.jpg';
-    const runtimetext = `🎭 *Bot Have Been Running For ${runtime(process.uptime())}* 🤖`;
+    const runtimetext = `💎 *Bot Have Been Running For ${runtime(process.uptime())}* 🤖`;
     zk.sendMessage(dest, {
       text: runtimetext,
       contextInfo: {
