@@ -36,7 +36,7 @@ zokou({ nomCom: "gpt", reaction: "🪅", categorie: "ai" }, async (dest, zk, com
                 text: answer
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "> *𝚳𝚪 𝚮𝚵𝚰𝐒𝚳𝚵🎭*"
+                text: "> *💎BENSON-TECHNOLOGY💎*"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 title: "",
