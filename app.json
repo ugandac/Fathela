@@ -24,7 +24,7 @@
     },
     "AUTO_REACT": {
       "description": "Your contact will  react to messages automatically(type yes to active or no to deactive  ; don't write in capital letter)",
-      "value": "yes",
+      "value": "no",
       "required": false
     },
     "AUTO_DOWNLOAD_STATUS": {
@@ -125,7 +125,7 @@
     "AUTO_REACTION": {
       "description": "Put yes if you want the bot to react to messages in private",
       "required": false,
-      "value": "yes"
+      "value": "no"
     }
   },
   "formation": {
