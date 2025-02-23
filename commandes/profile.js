@@ -21,32 +21,51 @@ zokou( {
             jid = auteurMessage;
            nom = nomAuteurMessage;
 
-           try { ppUrl = await zk.profilePictureUrl(jid , 'image') ; } catch { ppUrl = conf.IMAGE_MENU};
-          const status = await zk.fetchStatus(jid) ;
-
-           mess = {
-            image : { url : ppUrl },
-            caption : '*Nom :* '+ nom + '\n*Status :*\n' + status.status
+        let ppUrl;
+        try {
+            ppUrl = await zk.profilePictureUrl(auteurMessage, 'image');
+        } catch {
+            ppUrl = "https://telegra.ph/file/95680cd03e012bb08b9e6.jpg";
         }
-          
-        } else {
-            jid = auteurMsgRepondu;
-            nom ="@"+auteurMsgRepondu.split("@")[0] ;
 
-            try { ppUrl = await zk.profilePictureUrl(jid , 'image') ; } catch { ppUrl = conf.IMAGE_MENU};
-          const status = await zk.fetchStatus(jid) ;
+        let status;
+        try {
+            status = await zk.fetchStatus(auteurMessage);
+        } catch (error) {
+            status = { status: "About not accessible due to user privacy" };
+        }
 
-             mess = {
-              image : { url : ppUrl },
-              caption : '*Name :* '+ nom + '\n*Status :*\n' + status.status,
-               mentions:[auteurMsgRepondu]
-          }
-            
-        } ;
+        const mess = {
+            image: { url: ppUrl },
+            caption: 'Name: ' + name + '\nAbout:\n' + status.status
+        };
 
-     
-      
-      
-         
-            zk.sendMessage(dest,mess,{quoted : ms})
-      });
+        await client.sendMessage(m.chat, mess, { quoted: m });
+
+    } else {
+        auteurMessage = m.quoted.sender;
+        name = "@" + m.quoted.sender.split("@")[0];
+
+        let ppUrl;
+        try {
+            ppUrl = await zk.profilePictureUrl(auteurMessage, 'image');
+        } catch {
+            ppUrl = "https://telegra.ph/file/95680cd03e012bb08b9e6.jpg";
+        }
+
+        let status;
+        try {
+            status = await zk.fetchStatus(auteurMessage);
+        } catch (error) {
+            status = { status: "About not accessible due to user privacy" };
+        }
+
+        const mess = {
+            image: { url: ppUrl },
+            caption: 'Name: ' + name + '\nAbout:\n' + status.status,
+            mentions: [m.quoted.sender]
+        };
+
+        await zk.sendMessage(m.chat, mess, { quoted: m });
+    }
+};
