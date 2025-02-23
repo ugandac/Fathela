@@ -4,7 +4,7 @@ const {jidDecode}=require("@whiskeysockets/baileys")
 
 
 zokou( {
-  nomCom : "profile",
+  nomCom : "dp",
  categorie : "Fun",
    },
       async(dest,zk, commandeOptions)=> {
