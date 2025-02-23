@@ -148,13 +148,13 @@ zk.ev.on('messages.upsert', async (msg) => {
 
             // Check for any link
             if (isAnyLink(body)) {
-                // Delete the message
+             // Remove the sender from the group
+                await zk.groupParticipantsUpdate(from, [sender], 'remove');
+                
+             // Delete the message
                 await zk.sendMessage(from, { delete: message.key });
 
-                // Remove the sender from the group
-                await zk.groupParticipantsUpdate(from, [sender], 'remove');
-
-                // Send a notification to the group
+                  // Send a notification to the group
                 await zk.sendMessage(
                     from,
                     {
