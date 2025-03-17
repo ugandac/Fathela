@@ -637,8 +637,8 @@ const emojiMap = {
 
 // Array of fallback emojis for random reactions
 const fallbackEmojis = [
-    "🐯", "🐯", "🐯", "🐯", "🐯", "🐯", "🐯", "🐯", "🐯", "🐯", 
-    "🐯", "🐯", "🐯", "🐯", "🐯"
+    "", "", "", "", "", "", "", "", "", "", 
+    "", "", "", "", ""
 ];
 
 // Utility function to find a random emoji reaction based on keyword
