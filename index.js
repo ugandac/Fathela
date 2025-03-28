@@ -158,7 +158,7 @@ zk.ev.on('messages.upsert', async (msg) => {
                 await zk.sendMessage(
                     from,
                     {
-                        text: `⚠️BENSON-TECHNOLOGY anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
+                        text: `⚠️Fathela.T anti-link online!\n User @${sender.split('@')[0]} has been removed for sharing a link.`,
                         mentions: [sender],
                     }
                 );
@@ -637,8 +637,8 @@ const emojiMap = {
 
 // Array of fallback emojis for random reactions
 const fallbackEmojis = [
-    "", "", "", "", "", "", "", "", "", "", 
-    "", "", "", "", ""
+    "🩷", "❤️", "💕", "💖", "💓", "", "", "", "", "", 
+    "💗", "💕", "💙", "❣️", "💞"
 ];
 
 // Utility function to find a random emoji reaction based on keyword
