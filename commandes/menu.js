@@ -34,7 +34,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-> 💎BENSON-TECHNOLOGY💎
+Fathela.T
 ╭─────────────────
 │⛓╭─────────────
 │✰│▸ *мєиυ* 
@@ -43,7 +43,7 @@ const date = moment().format('DD/MM/YYYY');
 │✰│▸ *ρℓυgιиѕ* : ${cm.length} 
 │✰│▸ *я.α.м* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │✰│▸ *ϐαяℓєγѕ* : ${os.platform()}
-│✰│▸ *💎BENSON-TECHNOLOGY💎*
+│✰│▸ Fathela.T
 │⛓╰──────────────
 ╰──────────────────\n`;
     
@@ -59,7 +59,7 @@ let menuMsg = ` *BENSON-TECHNOLOGY COMMANDS* `;
 ╰────────────···▸▸ \n`
     }
 
-    menuMsg += `> BENSON-TECHNOLOGY  IS MY OWNER
+    menuMsg += `> Fathela.T IS MY OWNER
 `;
 
    var lien = mybotpic();
