@@ -1,10 +1,10 @@
-<h1 align="center"><img src="./assets/logo.gif" width="30px"> BENSON-TECHNOLOGY <img src="./assets/logo.gif" width="30px"></h1>
+<h1 align="center"><img src="./assets/logo.gif" width="30px"> FATHELA-T <img src="./assets/logo.gif" width="30px"></h1>
 
 ## ✨Latest Updates
 # BENSON-TECHNOLOGY
 
 <p align="center"> 
-<img src="https://i.imgur.com/vAAA4Fq.jpeg" />
+<img src="https://i.imgur.com/xFmW8er.jpeg" />
 Musicbot Developed by  *BENSON TECHNOLOGY*
   
 [`FORK`](https://github.com/ugandac/BENSON-TECHNOLOGY/fork)
