@@ -5,7 +5,7 @@
 
 <p align="center"> 
 <img src="https://i.imgur.com/xFmW8er.jpeg" />
-Musicbot Developed by  *BENSON TECHNOLOGY*
+Musicbot Developed by  *FATHELA T*
   
 [`FORK`](https://github.com/ugandac/BENSON-TECHNOLOGY/fork)
 
