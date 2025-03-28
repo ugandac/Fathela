@@ -1,14 +1,14 @@
 {
-  "name": "BENSON-TECHNOLOGY",
-  "description": "This BOT was developed by BENSON-TECHNOLOGY.",
+  "name": "FATHELA-T",
+  "description": "This BOT was developed by FATHELA-T.",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://i.imgur.com/vAAA4Fq.jpeg",
-  "repository": "https://github.com/ugandac/BENSON-TECHNOLOGY",
+  "logo": "https://i.imgur.com/xFmW8er.jpeg",
+  "repository": "https://github.com/ugandac/Fathela",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -64,12 +64,12 @@
     },
     "BOT_NAME": {
       "description": "put A name for your bot",
-      "value": "BENSON-TECHNOLOGY",
+      "value": "FATHELA-T",
       "required": false
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.imgur.com/vAAA4Fq.jpeg",
+      "value":"https://i.imgur.com/xFmW8er.jpeg",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -95,12 +95,12 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "BENSON-TECHNOLOGY"
+      "value": "FATHELA-T"
     },
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "255766793224"
+      "value": "254702713600"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
@@ -110,11 +110,11 @@
     "STARTING_BOT_MESSAGE": {
       "description": "if you don't want startting-bot-message put no else put yes",
       "required": true,
-      "value": "yes"
+      "value": "no"
     },
     "PRESENCE": {
       "description": "Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
-      "value": "",
+      "value": "3",
       "required": false
     },
     "ANTI_DELETE_MESSAGE": {
